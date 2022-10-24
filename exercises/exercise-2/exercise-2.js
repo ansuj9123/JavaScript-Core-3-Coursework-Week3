@@ -70,3 +70,15 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+function displayName(hogwarts) {
+
+ return (hogwarts.filter(({house}) => {
+if (house === "Gryffindor") {
+  return true
+}
+}).map(({firstName, lastName})=> {
+  return `${firstName} ${lastName}`
+}))
+}
+console.log(displayName(hogwarts));
